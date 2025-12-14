@@ -20,6 +20,7 @@ app.get("/students", async (req, res) => {
     let query;
     let params;
 
+    // if cursor then i have extracted +1 just to get the next cursor
     if (cursor) {
       query = `
         SELECT id, name, roll 
